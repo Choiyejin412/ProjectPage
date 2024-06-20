@@ -153,7 +153,10 @@
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            고혈압은 전 세계적으로 중요한 건강 문제 중 하나로, 조기 발견과 관리가 필수적인 질병입니다. <br>
+            고혈압은 심혈관 질환, 뇌졸중, 신부전 등 심각한 합병증을 유발할 수 있으므로, 예방과 관리를 위해 정기적인 건강검진이 중요하게 여겨집니다..<br>
+            그렇기에 건강검진 데이터는 개인의 건강 상태를 종합적으로 파악할 수 있는 중요한 자료로, 이를 활용하여 고혈압을 조기에 예측하고 적절한 조치를 취할 수 있습니다. <br>
+            본 연구에서는 건강검진 데이터를 활용하여 고혈압을 예측함으로써, 개인의 건강 관리에 기여하고자 합니다.
           </p>
         </div>
       </div>
@@ -181,9 +184,28 @@
         <!-- Your image here -->
         <img src="static/images/ai1.jpg" alt="MY ALT TEXT"/>
         <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <h4>1.   데이터 수집 및 전처리</h4>
+          <ul>
+              <li>공공 건강검진 데이터를 수집하여 사용하였습니다.</li>
+              <li>결측값을 처리하고, 범주형 변수를 수치형으로 변환하는 등의 데이터 전처리 과정을 수행하였습니다.</li>
+
+          </ul>
+          <h4>2.   모델 선택 및 학습</h4>
+          <ul>
+              <li>고혈압 예측을 위해 RandomForestRegressor 모델을 선택하였습니다.</li>
+              <li>데이터를 학습 데이터와 테스트 데이터로 분할하여 모델을 학습시켰습니다.</li>
+          </ul>
+          <h4>3.   예측 및 평가</h4>
+          <ol>
+              <li>학습된 모델을 사용하여 테스트 데이터에 대한 고혈압을 예측하였습니다.</li>
+              <li>모델의 성능을 Mean Squared Error (MSE)와 R^2 Score를 통해 평가하였습니다.</li>
+          </ol>
+          <h4>4.   결과 요약</h4>
+            <ol>
+              <li>모델의 예측 결과를 시각화하여 실제 값과 예측 값을 비교하였습니다.</li>
+              <li>예측 결과에 대한 분석과 함께 모델의 성능을 평가하였습니다.</li>
+              <li>고혈압 예측을 위해 RandomForestRegressor 모델을 선택하였습니다.</li>
+            </ol>
         </div>
       </div>
       <div class="item">
@@ -230,9 +252,43 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Results</h2>
-        <div class="content has-text-justified">
+        <img class="content has-text-justified">
+        <ul>
+          <li>
+            데이터 전처리 과정
+          </li>
+        </ul>
+        <ol>
+          <li>결측값 처리 방법</li>
+          <ul>
+            <li>데이터셋을 로드한 후 결측값을 확인하고, 평균값으로 대체하였습니다.</li>
+            <li>결측값이 있는 열을 삭제하는 대신, 평균값으로 채뤄 데이터 손실을 최소화했습니다.</li>
+            <img src="static/images/ai1.jpg" alt="MY ALT TEXT"/>
+          </ul>
+          
+          <li>범주형 변수 변환 방법</li>
+          <ul>
+            <li>범주형 변수인 성별, 연령대코드, 시도코드 등의 데이터를 One-Hot Encoding 을 사용하여 수치형으로 변환하였습니다.</li>
+            <li>이를 통해 범주형 변수를 모델이 이해할 수 있도록 처리했습니다.</li>
+            <img src="static/images/ai1.jpg" alt="MY ALT TEXT"/>
+          </ul>
+          
+          <li>데이터 분할 (훈련 데이터와 테스트 데이터)</li>
+          <ul>
+            <li>전체 데이터를 학습 데이터와 테스트 데이터로 분할하여 모델의 학습과 평가에 사용하였습니다.</li>
+            <li>학습 데이터와 테스트 데이터의 비율은 80:20으로 설정하였습니다.</li>
+            <img src="static/images/ai1.jpg" alt="MY ALT TEXT"/>
+          </ul>
+
+        </ol>
+          
+          
+
+          
+          
+          
+          
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
         
